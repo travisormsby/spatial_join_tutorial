@@ -3,7 +3,7 @@ from arcgis.gis import GIS
 import pandas as pd
 import os
 
-workspace = r'C:\\users\orms0027\documents\GIS5572\EX07\EX07.gdb'
+workspace = r'file\path\to\database.gdb'
 arcpy.env.workspace = workspace
 
 gis = GIS('Pro')
