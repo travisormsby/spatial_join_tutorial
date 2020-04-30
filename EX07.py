@@ -1,7 +1,6 @@
 import arcpy
 from arcgis.gis import GIS
 import pandas as pd
-import os
 
 workspace = r'C:\\file\path\to\project.gdb'
 arcpy.env.workspace = workspace
