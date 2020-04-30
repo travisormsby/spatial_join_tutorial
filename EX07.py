@@ -36,7 +36,7 @@ field_mapping = arcpy.FieldMappings()
 name = arcpy.FieldMap()
 total_val = arcpy.FieldMap()
 
-name.addInputField('County', 'Name')
+name.addInputField('City', 'Name')
 
 total_val.addInputField('Buildings', 'Assessed_Value')
 total_val.mergeRule = 'SUM'
@@ -54,9 +54,9 @@ total_val.outputField = total_val_out
 field_mapping.addFieldMap(name)
 field_mapping.addFieldMap(total_val)
 
-target_features=os.path.join(workspace, 'County')
+target_features=os.path.join(workspace, 'City')
 join_features=os.path.join(workspace, 'Buildings')
-out_feature_class='County_Prop_Val'
+out_feature_class='City_Prop_Val'
 join_operation='JOIN_ONE_TO_ONE'
 join_type = 'KEEP_ALL'
 match_option='CONTAINS'
