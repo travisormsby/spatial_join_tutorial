@@ -13,8 +13,8 @@ for feature_layer in data.layers:
     sdf = pd.DataFrame.spatial.from_layer(feature_layer)
     sdf.spatial.to_featureclass(location=feature_layer.properties.name)
 
-target_features=os.path.join(workspace, 'Address_Points')
-join_features=os.path.join(workspace, 'Buildings')
+target_features= 'Address_Points'
+join_features= 'Buildings'
 out_feature_class='Address_with_building'
 join_operation='JOIN_ONE_TO_ONE'
 join_type = 'KEEP_ALL'
@@ -53,8 +53,8 @@ total_val.outputField = total_val_out
 field_mapping.addFieldMap(name)
 field_mapping.addFieldMap(total_val)
 
-target_features=os.path.join(workspace, 'City')
-join_features=os.path.join(workspace, 'Buildings')
+target_features= 'City'
+join_features= 'Buildings'
 out_feature_class='City_Prop_Val'
 join_operation='JOIN_ONE_TO_ONE'
 join_type = 'KEEP_ALL'
