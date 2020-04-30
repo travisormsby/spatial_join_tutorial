@@ -20,7 +20,7 @@ out_feature_class='Address_with_building'
 join_operation='JOIN_ONE_TO_ONE'
 join_type = 'KEEP_ALL'
 match_option='CLOSEST'
-search_radius='10 Meters'
+search_radius='30 Meters'
 
 
 arcpy.analysis.SpatialJoin(target_features=target_features, 
